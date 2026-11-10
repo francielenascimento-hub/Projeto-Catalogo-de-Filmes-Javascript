@@ -1,1 +1,116 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 2;
+    color: beige;
+    margin: top;
+    background-color: #161824;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #161824;
+    background-color: beige;
+}
+
+footer {
+    padding: 20px;
+    font-size: 0.9rem;
+    background-color: #050609;
+}
+
+main {
+    flex: 1;
+    max-width: 1100px;
+    padding: 20px;
+    margin: 20px auto;
+    background-color: #333853;
+    border-radius: 10px;
+}
+
+main > section {
+
+}
+
+main > section:last-child {
+
+}
+
+h2 {
+
+}
+
+.campo {
+
+}
+
+label {
+
+}
+
+input, select, textarea {
+
+}
+
+textarea {
+
+}
+
+input:focus, select:focus, textarea:focus, button:focus {
+
+}
+
+#controles {
+
+}
+
+#controles .campo {
+
+}
+
+button {
+
+}
+
+button:hover {
+
+}
+
+/* */
+
+#painel {
+
+}
+
+.estatistica {
+
+}
+
+.estatistica span {
+
+}
+
+.card.categoria-aventura { border-color: #6fcf97; }
+.card.categoria-crime    { border-color: #eb5757; }
+.card.categoria-terror   { border-color: #9b51e0; }
+
+.card.categoria-aventura { border-color: #6fcf97; }
+.card.categoria-crime    { border-color: #eb5757; }
+.card.categoria-terror   { border-color: #9b51e0; }
+
+.ano {
+    font-size: 0.9rem;
+}
