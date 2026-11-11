@@ -104,7 +104,7 @@ function filtrarFilmes(lista, texto, nomeCategoria) {
         }
     }
     return resultado;
-};
+}
 
 const campoBusca = document.getElementById("busca");
 const selectCategoria = document.getElementById("filtro-categoria");
@@ -113,8 +113,10 @@ function aplicarFiltros() {
     const texto = campoBusca.value;
     const categoria = selectCategoria.value;
     const lista = filtrarFilmes(catalogo.itens, texto, categoria);
+    
     renderizar(lista);
-};
+    atualizarPainel(lista);    
+}
 
 // [R3] Eventos de busca e filtro
 campoBusca.addEventListener("input", aplicarFiltros);
@@ -130,7 +132,7 @@ campoBusca.addEventListener('keydown', function (event) {
 }); 
 
 // [R4] - Formulário de cadastro com validação em JavaScript
-// Uso da IA: usada para explicação das etapas e dos comandos necessários
+// Uso da IA (Claude): usada para explicação das etapas por blocos e dos comandos necessários com exemplos, que adaptamos ao nosso projeto, e quaisquer erros de digitação
 const form = document.getElementById('form-filme');
 const campoNome = document.getElementById('nome');
 const campoNota = document.getElementById('nota');
@@ -199,7 +201,7 @@ form.addEventListener('submit', function(event) {
         mensagem.classList.remove('erro');
         mensagem.classList.add('sucesso');
 
-        renderizar(catalogo.itens);
+        aplicarFiltros();
     }
     
     catch (erro) {
@@ -214,6 +216,56 @@ form.addEventListener('submit', function(event) {
 
 
 // [R6] - Painel de estatísticas
+// Uso da IA (Claude): também usada para explicação das etapas por blocos com exemplos, que adaptamos ao nosso projeto, e quaisquer erros de digitação
+function criarEstatistica(titulo, valor) {
+    const caixa = document.createElement('div');
+    caixa.classList.add('estatistica');
 
+    const elementoTitulo = document.createElement('span');
+    elementoTitulo.textContent = titulo;
+    caixa.appendChild(elementoTitulo);
+
+    const elementoValor = document.createElement('strong');
+    elementoValor.textContent = valor;
+    caixa.appendChild(elementoValor);
+
+    return caixa;
+}
+
+function atualizarPainel(lista) {
+    const painel = document.getElementById('painel');
+    painel.innerHTML = '';
+
+    let assistidos = 0;
+    let soma = 0;
+    let maior = null;
+    let mediaTexto = '- ';
+    let maiorTexto = '- ';
+
+    for (const item of lista) {
+        if (item.assistido === true) {
+            assistidos++;
+        }
+
+        soma += item.nota;
+
+        if (maior === null || item.nota > maior.nota) {
+            maior = item;
+        }
+    }
+
+    if (lista.length > 0) {
+        mediaTexto = (soma / lista.length).toFixed(2).replace('.', ',');
+        maiorTexto = maior.nome + ' (' + maior.nota.toFixed(1) + ')';
+    }
+
+    painel.appendChild(criarEstatistica('Total de filmes ', lista.length));
+    painel.appendChild(criarEstatistica('Assistidos ', assistidos));
+    painel.appendChild(criarEstatistica('Nota média ', mediaTexto));
+    painel.appendChild(criarEstatistica('Melhor nota ', maiorTexto));
+
+}
+
+atualizarPainel(filmes);
 
 // R7
