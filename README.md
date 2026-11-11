@@ -18,25 +18,25 @@ Nome: Thiago Santana de Freitas                  RA: 2840482613044
 
 - QUESTÃO 01: [R1] Dados: array de objetos e objeto principal
 
- - Foi desenvolvida pelo integrante Thiago, o codigo inteiro foi feito oi.!
+ ** Foi desenvolvida pelo integrante Thiago, o codigo inteiro foi feito oi.!
 
 - QUESTÃO 02: [R2] Renderização dinâmica
 
- - Foi desenvolvida pela integrante Franciele.
+ ** Foi desenvolvida pela integrante Franciele.
 
 - QUESTÃO 03: [R3] Busca e filtro
 
- - Foi desenvolvida pelo integrante Thiago
+ ** Foi desenvolvida pelo integrante Thiago
 
 - QUESTÃO 04: [R4] Formulário de cadastro com validação em JavaScript
 
- - Foi desenvolvida pela integrante Franciele
+ ** Foi desenvolvida pela integrante Franciele
 
 - QUESTÃO 05: [R5] Interação nos cards
 
- - Foi desenvolvida pelo integrante Thiago
+ ** Foi desenvolvida pelo integrante Thiago
 
 - QUESTÃO 06: [R6] Painel de estatísticas
 
- - Foi desenvolvida pela integrante Franciele
+ ** Foi desenvolvida pela integrante Franciele
 
