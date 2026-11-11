@@ -94,7 +94,6 @@ function renderizar(lista) {
 renderizar(filmes);
 
 // [R3] Funções auxiliares
-
 function filtrarFilmes(lista, texto, nomeCategoria) {
     const resultado = [];
     for (let i = 0; i < lista.length; i++) {
@@ -129,8 +128,6 @@ campoBusca.addEventListener('keydown', function (event) {
     }
 
 }); 
-
-
 
 // [R4] - Formulário de cadastro com validação em JavaScript
 // Uso da IA: usada para explicação das etapas e dos comandos necessários
@@ -210,13 +207,13 @@ form.addEventListener('submit', function(event) {
         mensagem.classList.remove('sucesso');
         mensagem.classList.add('erro');
     }
-})
+});
 
 
-// [R5]
+// [R5] - Interação nos cards
 
 
-// R6
+// [R6] - Painel de estatísticas
 
 
 // R7
