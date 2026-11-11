@@ -93,7 +93,43 @@ function renderizar(lista) {
 
 renderizar(filmes);
 
-// R3
+// [R3] Funções auxiliares
+
+function filtrarFilmes(lista, texto, nomeCategoria) {
+    const resultado = [];
+    for (let i = 0; i < lista.length; i++) {
+        const nomeBate = lista[i].nome.toLowerCase().indexOf(texto.toLowerCase()) !== -1;
+        const categoriaBate = nomeCategoria === "todas" || lista[i].categoria === nomeCategoria;
+        if (nomeBate && categoriaBate) {
+            resultado.push(lista[i]);
+        }
+    }
+    return resultado;
+};
+
+const campoBusca = document.getElementById("busca");
+const selectCategoria = document.getElementById("filtro-categoria");
+
+function aplicarFiltros() {
+    const texto = campoBusca.value;
+    const categoria = selectCategoria.value;
+    const lista = filtrarFilmes(catalogo.itens, texto, categoria);
+    console.log(lista);
+};
+
+// [R3] Eventos de busca e filtro
+campoBusca.addEventListener("input", aplicarFiltros);
+selectCategoria.addEventListener("change", aplicarFiltros);
+
+campoBusca.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+        campoBusca.value = "";
+        selectCategoria.value = "todas";
+        aplicarFiltros();
+    }
+
+}); 
+
 
 
 // R4 - Formulário de cadastro com validação em JavaScript
