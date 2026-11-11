@@ -1,4 +1,4 @@
-// R1 - Dados do Catálogo
+// [R1] - Dados do Catálogo
 const filmes = [
     {id: 1, nome: "O Poderoso Chefão", categoria: "crime", ano: 1972, nota: 9.2, assistido: false, descricao: "Um clássico do cinema dirigido por Francis Ford Coppola."},
     {id: 2, nome: "O Senhor dos Anéis: O Retorno do Rei", categoria: "aventura", ano: 2003, nota: 8.8, assistido: true, descricao: "Um épico de fantasia baseado no livro de J.R.R. Tolkien."},
@@ -11,7 +11,7 @@ const filmes = [
     {id: 9, nome: "Os Simpsons: O filme", categoria: "comedia", ano: 2007, nota: 8.0, assistido: true, descricao: "Um filme animado de comédia."},
     {id: 10, nome: "A Viagem de Chihiro", categoria: "animacao", ano: 2001, nota: 8.6, assistido: false, descricao: "Um filme de animação japonês dirigido por Hayao Miyazaki."}
 ];
-
+// [R1] Objeto principal do catálogo
 const catalogo = {
     nome: "Catálogo de Filmes",
     itens: filmes, 
@@ -24,7 +24,7 @@ const catalogo = {
     }
 };
 
-// R2 - Renderização dinâmica
+// [R2] - Renderização dinâmica
 // Uso da IA: usada para pesquisar fontes que explicam apenas como aplicar a renderização dinâmica de conteúdo
 function renderizar(lista) {
     const conteneur = document.getElementById('lista');
@@ -132,7 +132,7 @@ campoBusca.addEventListener('keydown', function (event) {
 
 
 
-// R4 - Formulário de cadastro com validação em JavaScript
+// [R4] - Formulário de cadastro com validação em JavaScript
 // Uso da IA: usada para explicação das etapas e dos comandos necessários
 const form = document.getElementById('form-filme');
 const campoNome = document.getElementById('nome');
@@ -213,7 +213,7 @@ form.addEventListener('submit', function(event) {
 })
 
 
-// R5
+// [R5]
 
 
 // R6
