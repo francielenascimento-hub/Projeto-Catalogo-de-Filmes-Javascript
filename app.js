@@ -114,7 +114,7 @@ function aplicarFiltros() {
     const texto = campoBusca.value;
     const categoria = selectCategoria.value;
     const lista = filtrarFilmes(catalogo.itens, texto, categoria);
-    console.log(lista);
+    renderizar(lista);
 };
 
 // [R3] Eventos de busca e filtro
