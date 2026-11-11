@@ -8,11 +8,13 @@ Nome: Franciele Patrícia Nascimento da Silva   RA: 2840482613023
 
 Nome: Thiago Santana de Freitas                RA: 2840482613044
 
+
 ### Desenvolvimento do Projeto
 
 HTML: A estrutura básica do HTML, para o Catálogo de Filmes, foi desenvolvida por ambos os integrantes da dupla.
 
 CSS: O CSS foi desenvolvido com ajuda da IA Claude, para adiantar o trabalho.
+
 
 QUESTÃO 01: [R1] Dados: array de objetos e objeto principal
 
