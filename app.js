@@ -25,7 +25,7 @@ const catalogo = {
 };
 
 // R2 - Renderização dinâmica
-// Uso da IA: pesquisar fontes que explicam apenas como aplicar a renderização dinâmica de conteúdo
+// Uso da IA: usada para pesquisar fontes que explicam apenas como aplicar a renderização dinâmica de conteúdo
 function renderizar(lista) {
     const conteneur = document.getElementById('lista');
 
@@ -96,7 +96,85 @@ renderizar(filmes);
 // R3
 
 
-// R4
+// R4 - Formulário de cadastro com validação em JavaScript
+// Uso da IA: usada para explicação das etapas e dos comandos necessários
+const form = document.getElementById('form-filme');
+const campoNome = document.getElementById('nome');
+const campoNota = document.getElementById('nota');
+const campoAno = document.getElementById('ano');
+const campoCategoria = document.getElementById('categoria');
+const campoDescricao = document.getElementById('descricao');
+const mensagem = document.getElementById('mensagem');
+
+function validar(dados) {
+    if (dados.nome.length < 3) {
+        campoNome.classList.add('erro');
+        throw new Error('O nome do filme deve ter pelo menos 3 caracteres.');
+    }
+
+    if (isNaN(dados.nota) || dados.nota <= 0 || dados.nota > 10) {
+        campoNota.classList.add('erro');
+        throw new Error('A nota deve ser um número maior que 0 e até 10.');
+    }
+
+    if (isNaN(dados.ano) || dados.ano < 1888 || dados.ano > 2026) {
+        campoAno.classList.add('erro');
+        throw new Error('Digite um ano de lançamento válido.');
+    }
+
+    if (dados.categoria === '') {
+        campoCategoria.classList.add('erro');
+        throw new Error('Selecione uma categoria.');
+    }
+}
+
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    campoNome.classList.remove('erro');
+    campoNota.classList.remove('erro');
+    campoAno.classList.remove('erro');
+    campoCategoria.classList.remove('erro');
+    campoDescricao.classList.remove('erro');
+    mensagem.textContent = '';
+
+    const dados = {
+        nome: campoNome.value.trim(),
+        nota: parseFloat(campoNota.value),
+        ano: Number(campoAno.value),
+        categoria: campoCategoria.value,
+        descricao: campoDescricao.value.trim()
+    };
+
+    try {
+        validar(dados);
+        
+        const novoFilme = {
+            id: catalogo.itens.length + 1,
+            nome: dados.nome,
+            ano: dados.ano,
+            categoria: dados.categoria,
+            descricao: dados.descricao,
+            nota: dados.nota,
+            assistido: false
+        };
+
+        catalogo.adicionar(novoFilme);
+        form.reset();
+
+        mensagem.textContent = 'Filme cadastrado com sucesso!';
+        mensagem.classList.remove('erro');
+        mensagem.classList.add('sucesso');
+
+        renderizar(catalogo.itens);
+    }
+    
+    catch (erro) {
+        mensagem.textContent = erro.message;
+        mensagem.classList.remove('sucesso');
+        mensagem.classList.add('erro');
+    }
+})
 
 
 // R5
