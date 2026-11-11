@@ -26,7 +26,7 @@
             
             <div class="campo">
                 <label for="filtro-categoria">Categoria</label>
-                <select id="filtro-categoria">
+                <select categoria="filtro-categoria">
                     <option value="todas">Todas</option>
                     <option value="acao">Ação</option>
                     <option value="aventura">Aventura</option>
@@ -55,11 +55,11 @@
             
             <h2>Cadastrar Filme</h2>
 
-            <form id="form=filme" novalidate>
+            <form id="form-filme" novalidate>
 
                 <div class="campo">
                     <label for="nome">Nome do filme</label>
-                    <input type="text" id="nome" placeholder="Exemplo: Interestelar">
+                    <input type="text" id="nome" placeholder="Exemplo: A Origem">
                 </div>
 
                 <div class="campo">
@@ -75,7 +75,7 @@
                 <div class="campo">
                         <label for="categoria">Categoria</label>
                         <select id="filtro-categoria">
-                        <option value="todas">Todas</option>
+                        <option value="">Selecione a categoria</option>
                         <option value="acao">Ação</option>
                         <option value="aventura">Aventura</option>
                         <option value="comedia">Comédia</option>
@@ -83,6 +83,8 @@
                         <option value="drama">Drama</option>
                         <option value="ficcao">Ficção</option>
                         <option value="terror">Terror</option>
+                        <option value="romance">Romance</option>
+                        <option value="animacao">Animação</option>
                     </select>
                 </div>
 
