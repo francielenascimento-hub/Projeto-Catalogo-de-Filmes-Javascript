@@ -1,6 +1,6 @@
 # Projeto de Desenvolvimento Web (com foco em Javascript)
 
-## Catálogo de Filmes
+## TEMA: Catálogo de Filmes
 
 Integrantes:
 
@@ -22,7 +22,7 @@ QUESTÃO 01: [R1] Dados: array de objetos e objeto principal
 
 QUESTÃO 02: [R2] Renderização dinâmica
 
--
+- Foi desenvolvida pela integrante Franciele.
 
 QUESTÃO 03: [R3] Busca e filtro
 
