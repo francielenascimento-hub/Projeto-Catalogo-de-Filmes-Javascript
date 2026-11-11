@@ -4,10 +4,9 @@
 
 Integrantes:
 
-Nome: Franciele Patrícia Nascimento da Silva   RA: 2840482613023
+Nome: Franciele Patrícia Nascimento da Silva     RA: 2840482613023
 
-Nome: Thiago Santana de Freitas                RA: 2840482613044
-
+Nome: Thiago Santana de Freitas                  RA: 2840482613044
 
 
 ### Desenvolvimento do Projeto
