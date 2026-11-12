@@ -197,7 +197,7 @@ button:hover {
 }
  
 /* Filme já assistido */
-.card.favorito {
+.card.assistido {
     border-color: var(--destaque);
     background-color: #1f2233;
 }
