@@ -46,4 +46,4 @@ Nome: Thiago Santana de Freitas                  RA: 2840482613044
 
 ## Dificuldades
 
-A principal dificuldade encontrada pela dupla foi auxiliar o conteúdo base aprendido, através de pesquisas, e implementar de acordo com o tema escolhido. Além disso, houve dificuldades também com a divisão de tarefas, organização do código, escolha do tema, mas que foram rapidamente resolvidas em acordo comum dos integrantes.
+A principal dificuldade encontrada pela dupla foi aplicar os conhecimentos adquiridos em sala de aula ao tema escolhido, sendo superada por meio de pesquisas e testes até encontrar a melhor abordagem. Também houve desafios na escolha do tema, na divisão de tarefas e na organização do código, solucionados por meio de acordos e decisões em conjunto.
