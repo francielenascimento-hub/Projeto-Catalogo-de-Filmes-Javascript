@@ -23,7 +23,6 @@ body {
     font-family: 'Courier New', Courier, monospace;
     line-height: 2;
     color: var(--claro);
-    margin: top;
     background-color: var(--fundo);
 }
 
@@ -51,30 +50,30 @@ main {
     border-radius: 10px;
 }
 
-main > section {
+main>section {
     margin-bottom: 28px;
 }
- 
-main > section:last-child {
+
+main>section:last-child {
     margin-bottom: 0;
 }
- 
+
 h2 {
     margin-bottom: 14px;
 }
- 
-/* Busca, filtro e formulário) */
+
+/* Busca, filtro e formulário */
 .campo {
     display: flex;
     flex-direction: column;
     gap: 6px;
     text-align: left;
 }
- 
+
 label {
     font-weight: bold;
 }
- 
+
 input,
 select,
 textarea {
@@ -87,11 +86,11 @@ textarea {
     border: 2px solid transparent;
     border-radius: 6px;
 }
- 
+
 textarea {
     resize: vertical;
 }
- 
+
 input:focus,
 select:focus,
 textarea:focus,
@@ -99,18 +98,18 @@ button:focus {
     outline: 3px solid var(--claro);
     outline-offset: 2px;
 }
- 
+
 /* Busca e filtro lado a lado (Flexbox) */
 #controles {
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
 }
- 
+
 #controles .campo {
     flex: 1 1 240px;
 }
- 
+
 /* Botões */
 button {
     padding: 10px 18px;
@@ -123,43 +122,43 @@ button {
     border-radius: 6px;
     cursor: pointer;
 }
- 
+
 button:hover {
     background-color: var(--destaque);
 }
- 
-/* [R6] ]Painel de estatísticas */
+
+/* [R6] Painel de estatísticas */
 #painel {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 12px;
 }
- 
+
 .estatistica {
     flex: 1 1 180px;
     padding: 12px;
     background-color: var(--fundo);
     border-radius: 8px;
 }
- 
+
 .estatistica span {
     display: block;
     font-size: 0.85rem;
 }
- 
+
 .estatistica strong {
     font-size: 1.3rem;
     color: var(--destaque);
 }
- 
+
 /* [R2] Lista de cards: Grid responsivo */
 #lista {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 16px;
 }
- 
+
 /* Card de cada filme */
 .card {
     display: flex;
@@ -172,11 +171,11 @@ button:hover {
     border: 2px solid transparent;
     border-radius: 8px;
 }
- 
+
 .card h3 {
     font-size: 1.15rem;
 }
- 
+
 .categoria {
     padding: 2px 10px;
     font-size: 0.85rem;
@@ -185,30 +184,25 @@ button:hover {
     background-color: var(--claro);
     border-radius: 20px;
 }
- 
+
 .nota {
     color: var(--destaque);
     font-weight: bold;
 }
- 
+
 .descricao {
     flex: 1;
     font-size: 0.95rem;
 }
- 
-/* Filme já assistido */
-.card.assistido {
-    border-color: var(--destaque);
-    background-color: #1f2233;
-}
- 
+
+
 /* Mensagem "Nenhum item encontrado": ocupa a linha inteira do grid */
 .vazio {
     grid-column: 1 / -1;
     padding: 20px;
 }
- 
-/* [R4]] Formulário */
+
+/* [R4] Formulário */
 #form-filme {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -216,55 +210,74 @@ button:hover {
     max-width: 700px;
     margin: 0 auto;
 }
- 
+
 /* Descrição e botão ocupam a largura toda */
-.campo-largo,
+.campo-maior,
 #form-filme button {
     grid-column: 1 / -1;
 }
- 
+
 /* Campo inválido */
 input.erro,
 select.erro,
 textarea.erro {
     border-color: var(--erro);
 }
- 
+
 /* Mensagem abaixo do formulário */
 #mensagem {
     min-height: 1.5em;
     margin-top: 14px;
     font-weight: bold;
 }
- 
+
 #mensagem.erro {
     color: var(--erro);
 }
- 
+
 #mensagem.sucesso {
     color: var(--sucesso);
 }
- 
+
 /* Telas pequenas */
 @media (max-width: 600px) {
     main {
         padding: 14px;
     }
- 
+
     #form-filme {
         grid-template-columns: 1fr;
     }
- 
+
     h1 {
         font-size: 1.5rem;
     }
 }
 
-.categoria-padrao {background-color: #26293e;}
+.categoria-padrao {
+    background-color: #26293e;
+}
 
-.card.categoria-aventura { border-color: #6ac3f3; background-color: #26293e}
-.card.categoria-crime    { border-color: #eb5757; background-color: #26293e}
-.card.categoria-terror   { border-color: #9b51e0; background-color: #26293e}
+.card.categoria-aventura {
+    border-color: #6ac3f3;
+    background-color: #26293e
+}
+
+.card.categoria-crime {
+    border-color: #eb5757;
+    background-color: #26293e
+}
+
+.card.categoria-terror {
+    border-color: #9b51e0;
+    background-color: #26293e
+}
+
+/* Filme já assistido */
+.card.assistido {
+    border-color: var(--destaque);
+    background-color: #1f2233;
+}
 
 .ano {
     font-size: 0.9rem;
