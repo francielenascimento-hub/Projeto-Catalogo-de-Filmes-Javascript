@@ -15,11 +15,7 @@ Nome: Thiago Santana de Freitas                  RA: 2840482613044
 
 * CSS: O CSS foi desenvolvido com ajuda da IA Claude, para adiantar o trabalho.
 
-* JS: O js foi desenvolvido de acordo com o que consta logo abaixo, e cada questão atendida está especificada no próprio arquivo, com o uso de comentários //.
-
-### Uso geral de IA
-
-Utilizamos a IA como uma ferramenta de apoio ao estudo. Ela foi consultada para relembrar a sintaxe de criação de elementos com document.createElement, para entender como o this funciona dentro dos métodos de um objeto, e para revisar a lógica de validação com try...catch. Também pedimos exemplos de como aplicar a classe de erro (classList.add) nos campos do formulário. Todo o código final foi digitado e adaptado por ambos os integrantes da dupla.
+* JS: O js foi desenvolvido de acordo com a descrição de cada questão abaixo, e cada questão atendida está especificada no próprio arquivo, com o uso de comentários //.
 
 
 * QUESTÃO 01: [R1] Dados: array de objetos e objeto principal
@@ -46,6 +42,9 @@ Utilizamos a IA como uma ferramenta de apoio ao estudo. Ela foi consultada para 
 
   * Foi desenvolvida pela integrante Franciele, com o auxílio de conteúdos digitais, sites e documentos, além o uso da IA Claude para tirar dúvidas, dificuldades, explicação por blocos e verificar quaisquer erros de digitação.
 
+### Uso geral de IA
+
+Utilizamos a IA como uma ferramenta de apoio ao estudo. Ela foi consultada para relembrar a sintaxe de criação de elementos com document.createElement, para entender como o this funciona dentro dos métodos de um objeto, e para revisar a lógica de validação com try...catch. Também pedimos exemplos de como aplicar a classe de erro (classList.add) nos campos do formulário. Todo o código final foi digitado e adaptado por ambos os integrantes da dupla.
 
 ## Dificuldades
 
