@@ -15,6 +15,9 @@ Nome: Thiago Santana de Freitas                  RA: 2840482613044
 
 * CSS: O CSS foi desenvolvido com ajuda da IA Claude, para adiantar o trabalho.
 
+* JS: O js foi desenvolvido de acordo com o que consta logo abaixo, e cada questão atendida está especificada no próprio arquivo, com o uso de comentários //.
+
+
 
 * QUESTÃO 01: [R1] Dados: array de objetos e objeto principal
 
@@ -22,7 +25,7 @@ Nome: Thiago Santana de Freitas                  RA: 2840482613044
 
 * QUESTÃO 02: [R2] Renderização dinâmica
 
-  * Foi desenvolvida pela integrante Franciele.
+  * Foi desenvolvida pela integrante Franciele, com o auxílio da IA do Google para pesquisar fontes e sites sobre o conteúdo, além do uso da IA Claude para dúvidas, dificuldades e verificar quaisquer erros de digitação.
 
 * QUESTÃO 03: [R3] Busca e filtro
 
@@ -30,7 +33,7 @@ Nome: Thiago Santana de Freitas                  RA: 2840482613044
 
 * QUESTÃO 04: [R4] Formulário de cadastro com validação em JavaScript
 
-  * Foi desenvolvida pela integrante Franciele
+  * Foi desenvolvida pela integrante Franciele, com o auxílio de conteúdos digitais, sites e documentos, além o uso da IA Claude para dúvidas, dificuldades, explicação por blocos e verificar quaisquer erros de digitação.
 
 * QUESTÃO 05: [R5] Interação nos cards
 
@@ -38,5 +41,9 @@ Nome: Thiago Santana de Freitas                  RA: 2840482613044
 
 * QUESTÃO 06: [R6] Painel de estatísticas
 
-  * Foi desenvolvida pela integrante Franciele
+  * Foi desenvolvida pela integrante Franciele, com o auxílio de conteúdos digitais, sites e documentos, além o uso da IA Claude para tirar dúvidas, dificuldades, explicação por blocos e verificar quaisquer erros de digitação.
 
+
+## Dificuldades
+
+A principal dificuldade encontrada pela dupla foi auxiliar o conteúdo base aprendido, através de pesquisas, e implementar de acordo com o tema escolhido. Além disso, houve dificuldades também com a divisão de tarefas, organização do código, escolha do tema, mas que foram rapidamente resolvidas em acordo comum dos integrantes.
