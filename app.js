@@ -1,20 +1,20 @@
 // [R1] - Dados do Catálogo
 const filmes = [
-    {id: 1, nome: "O Poderoso Chefão", categoria: "crime", ano: 1972, nota: 9.2, assistido: false, descricao: "Um clássico do cinema dirigido por Francis Ford Coppola."},
-    {id: 2, nome: "O Senhor dos Anéis: O Retorno do Rei", categoria: "aventura", ano: 2003, nota: 8.8, assistido: true, descricao: "Um épico de fantasia baseado no livro de J.R.R. Tolkien."},
-    {id: 3, nome: "Pulp Fiction", categoria: "crime", ano: 1994, nota: 8.9, assistido: true, descricao: "Um filme de crime e drama."},
-    {id: 4, nome: "A Origem", categoria: "ficcao", ano: 2010, nota: 8.8, assistido: false, descricao: "Um thriller de ficção científica dirigido por Christopher Nolan."},
-    {id: 5, nome: "O Silêncio dos Inocentes", categoria: "terror", ano: 1991, nota: 8.6, assistido: true, descricao: "Um suspense psicológico dirigido por Jonathan Demme."},
-    {id: 6, nome: "Titanic", categoria: "romance", ano: 1997, nota: 7.8, assistido: true, descricao: "Um filme de romance e drama dirigido por James Cameron."},
-    {id: 7, nome: "A Bela e a Fera", categoria: "romance", ano: 1991, nota: 8.0, assistido: false, descricao: "Um clássico da Disney baseado no conto de fadas, onde um príncipe é transformado em uma fera."},
-    {id: 8, nome: "O Exorcista", categoria: "terror", ano: 1973, nota: 8.0, assistido: true, descricao: "Um filme de terror dirigido por William Friedkin."},
-    {id: 9, nome: "Os Simpsons: O filme", categoria: "comedia", ano: 2007, nota: 8.0, assistido: true, descricao: "Um filme animado de comédia."},
-    {id: 10, nome: "A Viagem de Chihiro", categoria: "animacao", ano: 2001, nota: 8.6, assistido: false, descricao: "Um filme de animação japonês dirigido por Hayao Miyazaki."}
+    { id: 1, nome: "O Poderoso Chefão", categoria: "crime", ano: 1972, nota: 9.2, assistido: false, descricao: "Um clássico do cinema dirigido por Francis Ford Coppola." },
+    { id: 2, nome: "O Senhor dos Anéis: O Retorno do Rei", categoria: "aventura", ano: 2003, nota: 8.8, assistido: true, descricao: "Um épico de fantasia baseado no livro de J.R.R. Tolkien." },
+    { id: 3, nome: "Pulp Fiction", categoria: "crime", ano: 1994, nota: 8.9, assistido: true, descricao: "Um filme de crime e drama." },
+    { id: 4, nome: "A Origem", categoria: "ficcao", ano: 2010, nota: 8.8, assistido: false, descricao: "Um thriller de ficção científica dirigido por Christopher Nolan." },
+    { id: 5, nome: "O Silêncio dos Inocentes", categoria: "terror", ano: 1991, nota: 8.6, assistido: true, descricao: "Um suspense psicológico dirigido por Jonathan Demme." },
+    { id: 6, nome: "Titanic", categoria: "romance", ano: 1997, nota: 7.8, assistido: true, descricao: "Um filme de romance e drama dirigido por James Cameron." },
+    { id: 7, nome: "A Bela e a Fera", categoria: "romance", ano: 1991, nota: 8.0, assistido: false, descricao: "Um clássico da Disney baseado no conto de fadas, onde um príncipe é transformado em uma fera." },
+    { id: 8, nome: "O Exorcista", categoria: "terror", ano: 1973, nota: 8.0, assistido: true, descricao: "Um filme de terror dirigido por William Friedkin." },
+    { id: 9, nome: "Os Simpsons: O filme", categoria: "comedia", ano: 2007, nota: 8.0, assistido: true, descricao: "Um filme animado de comédia." },
+    { id: 10, nome: "A Viagem de Chihiro", categoria: "animacao", ano: 2001, nota: 8.6, assistido: false, descricao: "Um filme de animação japonês dirigido por Hayao Miyazaki." }
 ];
 // [R1] Objeto principal do catálogo
 const catalogo = {
     nome: "Catálogo de Filmes",
-    itens: filmes, 
+    itens: filmes,
     adicionar(item) {
         this.itens.push(item);
     },
@@ -40,7 +40,7 @@ function renderizar(lista) {
     }
 
     lista.forEach(item => {
-    
+
         const card = document.createElement('div');
         card.classList.add('card');
 
@@ -76,7 +76,7 @@ function renderizar(lista) {
         elementoNota.classList.add('nota');
         elementoNota.textContent = 'Nota: ' + item.nota.toFixed(1);
         card.appendChild(elementoNota);
-        
+
         let texto = item.descricao;
         if (texto.length > 60) {
             texto = texto.slice(0, 60) + '…';
@@ -87,6 +87,30 @@ function renderizar(lista) {
         elementoDescricao.textContent = 'Descrição: ' + texto;
         card.appendChild(elementoDescricao);
 
+
+        // [R5] Botão de assistido
+        const botao = document.createElement("button");
+        botao.classList.add("botao-assistido");
+        card.appendChild(botao);
+
+        if (item.assistido) {
+            botao.textContent = "Assistido";
+            card.classList.add("assistido");
+        } else {
+            botao.textContent = "Marcar como assistido";
+        }
+
+        botao.addEventListener("click", function () {
+            item.assistido = !item.assistido;
+            card.classList.toggle("assistido");
+            if (item.assistido) {
+                botao.textContent = "Assistido";
+            } else {
+                botao.textContent = "Marcar como assistido";
+            }
+            aplicarFiltros();
+        });
+
         conteneur.appendChild(card);
     });
 }
@@ -94,6 +118,7 @@ function renderizar(lista) {
 renderizar(filmes);
 
 // [R3] Funções auxiliares
+
 function filtrarFilmes(lista, texto, nomeCategoria) {
     const resultado = [];
     for (let i = 0; i < lista.length; i++) {
@@ -104,7 +129,7 @@ function filtrarFilmes(lista, texto, nomeCategoria) {
         }
     }
     return resultado;
-}
+};
 
 const campoBusca = document.getElementById("busca");
 const selectCategoria = document.getElementById("filtro-categoria");
@@ -113,10 +138,9 @@ function aplicarFiltros() {
     const texto = campoBusca.value;
     const categoria = selectCategoria.value;
     const lista = filtrarFilmes(catalogo.itens, texto, categoria);
-    
     renderizar(lista);
-    atualizarPainel(lista);    
-}
+    atualizarPainel(lista);
+};
 
 // [R3] Eventos de busca e filtro
 campoBusca.addEventListener("input", aplicarFiltros);
@@ -129,7 +153,9 @@ campoBusca.addEventListener('keydown', function (event) {
         aplicarFiltros();
     }
 
-}); 
+});
+
+
 
 // [R4] - Formulário de cadastro com validação em JavaScript
 // Uso da IA (Claude): usada para explicação das etapas por blocos e dos comandos necessários com exemplos, que adaptamos ao nosso projeto, e quaisquer erros de digitação
@@ -163,7 +189,7 @@ function validar(dados) {
     }
 }
 
-form.addEventListener('submit', function(event) {
+form.addEventListener('submit', function (event) {
     event.preventDefault();
 
     campoNome.classList.remove('erro');
@@ -183,7 +209,7 @@ form.addEventListener('submit', function(event) {
 
     try {
         validar(dados);
-        
+
         const novoFilme = {
             id: catalogo.itens.length + 1,
             nome: dados.nome,
@@ -203,17 +229,13 @@ form.addEventListener('submit', function(event) {
 
         aplicarFiltros();
     }
-    
+
     catch (erro) {
         mensagem.textContent = erro.message;
         mensagem.classList.remove('sucesso');
         mensagem.classList.add('erro');
     }
-});
-
-
-// [R5] - Interação nos cards
-
+})
 
 // [R6] - Painel de estatísticas
 // Uso da IA (Claude): também usada para explicação das etapas por blocos com exemplos, que adaptamos ao nosso projeto, e quaisquer erros de digitação
@@ -239,8 +261,8 @@ function atualizarPainel(lista) {
     let assistidos = 0;
     let soma = 0;
     let maior = null;
-    let mediaTexto = '- ';
-    let maiorTexto = '- ';
+    let mediaTexto = '—';
+    let maiorTexto = '—';
 
     for (const item of lista) {
         if (item.assistido === true) {
@@ -268,4 +290,4 @@ function atualizarPainel(lista) {
 
 atualizarPainel(filmes);
 
-// R7
+// [R7] Organização do código
