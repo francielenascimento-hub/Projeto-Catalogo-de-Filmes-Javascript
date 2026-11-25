@@ -4,9 +4,8 @@
 
 Integrantes:
 
-Nome: Franciele Patrícia Nascimento da Silva     RA: 2840482613023
-
-Nome: Thiago Santana de Freitas                  RA: 2840482613044
+- [Franciele Patrícia Nascimento da Silva](https://github.com/francielenascimento-hub)
+- [Thiago Santana de Freitas](https://github.com/Thiaguin7)
 
 
 ## Desenvolvimento do Projeto
